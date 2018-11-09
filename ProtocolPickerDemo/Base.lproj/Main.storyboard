@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8pY-o0-G4I">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer 1-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ProtocolPickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4VJ-JO-NfG">
+                                <rect key="frame" x="0.0" y="164" width="375" height="216"/>
+                                <color key="backgroundColor" name="Yellow  98% Pale #F8F8D2"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" name="Blue 75% #4040C0 "/>
+                        <constraints>
+                            <constraint firstItem="4VJ-JO-NfG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hy8-iQ-84g"/>
+                            <constraint firstItem="4VJ-JO-NfG" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VEz-m1-3RM"/>
+                            <constraint firstItem="4VJ-JO-NfG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="xGL-kN-pNw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Timer 1" id="4ba-pX-NDB">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="5hB-aO-oUD">
+                            <connections>
+                                <segue destination="G8K-3h-DGq" kind="show" id="3r7-xv-SrX"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="picker" destination="4VJ-JO-NfG" id="ESx-5U-QzW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="S6l-bY-h0Z">
+            <objects>
+                <viewController id="G8K-3h-DGq" customClass="SecondViewController" customModule="ProtocolPickerDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mc6-LX-Lsn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5c-XX-6ZM">
+                                <rect key="frame" x="0.0" y="164" width="375" height="216"/>
+                                <color key="backgroundColor" name="Cyan 75% #40c0c0"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" name="Yellow  98% Pale #F8F8D2"/>
+                        <constraints>
+                            <constraint firstItem="W5c-XX-6ZM" firstAttribute="leading" secondItem="cBk-Ad-aD0" secondAttribute="leading" id="NBl-RM-DBR"/>
+                            <constraint firstItem="W5c-XX-6ZM" firstAttribute="trailing" secondItem="cBk-Ad-aD0" secondAttribute="trailing" id="fpx-ts-c7d"/>
+                            <constraint firstItem="W5c-XX-6ZM" firstAttribute="top" secondItem="cBk-Ad-aD0" secondAttribute="top" constant="100" id="jve-NW-SWL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cBk-Ad-aD0"/>
+                    </view>
+                    <connections>
+                        <outlet property="picker" destination="W5c-XX-6ZM" id="uVY-sk-XCR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g1X-o8-LMz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="134"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="v0G-SG-iyT">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8pY-o0-G4I" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vkL-xi-PeG">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Ijv-lb-Dq6"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G9d-UN-PiT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="134"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Blue 75% #4040C0 ">
+            <color red="0.25098039215686274" green="0.25098039215686274" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Cyan 75% #40c0c0">
+            <color red="0.25099998712539673" green="0.75300002098083496" blue="0.75300002098083496" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Yellow  98% Pale #F8F8D2">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.82400000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
